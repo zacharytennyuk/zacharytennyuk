@@ -1,10 +1,13 @@
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-    // Add other paths if your components are located elsewhere
-  ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'emerald': '#023025',
+        'jade': '#00E1AB',
+        'gold': '#EBAA25',
+        'amber': '#734D00',
+      },
+    },
   },
   plugins: [],
 }

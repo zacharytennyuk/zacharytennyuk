@@ -1,0 +1,20 @@
+html {
+    scroll-behavior: smooth;
+}
+  
+.section {
+    padding-top: 4rem;
+    margin-top: -4rem;
+  }
+
+  .navBar {
+    @apply w-full bg-amber flex justify-end px-4 py-2 gap-10 fixed top-0 z-10 shadow-md;
+}
+
+.navLink {
+    @apply text-gold hover:text-yellow-200;
+}
+
+.page {
+    @apply min-h-screen w-full bg-emerald text-gold;
+}

@@ -1,24 +1,34 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
-import Home from './components/Home';
-import About from './components/About';
-import Resume from './components/Resume';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
+import './styles.css';
+import NavBar from './components/NavBar';
+import Home from './pages/Home';
+import About from './pages/About';
+import Resume from './pages/Resume';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
 
 export default function App() {
   return (
-    <Router>
-      <Routes>
-      <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/resume" element={<Resume />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-        {/* Redirect or default route */}
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </Router>
+    <div>
+      <NavBar />
+      <main >
+      <div id="home" className="section">
+          <Home />
+          </div>
+        <div id="about" className="section">
+          <About />
+          </div>
+        <div id="resume" className="section">
+          <Resume />
+          </div>
+        <div id="projects" className="section">
+          <Projects />
+          </div>
+        <div id="contact" className="section">
+          <Contact />
+          </div>
+      </main>
+    </div>
   );
 }
