@@ -17,7 +17,7 @@ export default function Home() {
         }} 
       />
       <HomeCard>
-        <h1 className="typing-animation">Helloooo World! I'm Zach</h1>
+        <h1 className="typing-animation">Hellooo World! I'm Zach :D</h1>
       </HomeCard>
     </div>
   );
