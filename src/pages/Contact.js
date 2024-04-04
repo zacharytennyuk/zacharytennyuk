@@ -1,18 +1,25 @@
 import React from 'react';
 import { FaGithub, FaLinkedinIn, FaEnvelope, FaPhone } from 'react-icons/fa';
-// import Title from '../components/Title';
 
 export default function Contact() {
   return (
     <div>
       <div style={{ position: "relative" }}>
+        <img
+          src={`${process.env.PUBLIC_URL}/gold.jpg`}
+          alt="dlritter-35371, Freeimages.com"
+          style={{ maxHeight: "150px", width: "100vw", objectFit: "cover" }} 
+        />
         <div className="contacts" style={{
           position: 'absolute',
-          bottom: '20px',
+          bottom: '0px',
           left: '50%',
           transform: 'translate(-50%, -50%)',
           zIndex: '1', /* Ensure the icons are above the image */
+          display: 'flex',
+          alignItems: 'center',
         }}>
+          <h1 className="contactTitle">Contact me! Let's connect.</h1>
           <a className="button" href="https://github.com/zacharytennyuk" target="_blank" rel="noopener noreferrer" title="GitHub">
             <FaGithub size={40} />
           </a>
@@ -26,11 +33,7 @@ export default function Contact() {
             <FaPhone size={40} />
           </a>
         </div>
-        <img
-          src={`${process.env.PUBLIC_URL}/gold.jpg`}
-          alt="dlritter-35371, Freeimages.com"
-          style={{ maxHeight: "120px", width: "100vw", objectFit: "cover" }} 
-        />
+        
       </div>
     </div>
   );

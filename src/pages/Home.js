@@ -1,28 +1,24 @@
 import React from 'react';
+import HomeCard from '../components/HomeCard';
 
 export default function Home() {
   return (
-    <div>
-      <div className="page">
+    <div style={{ position: 'relative', height: '100vh' }}> {/* Ensure relative positioning context for absolute children */}
       <img
-          src={`${process.env.PUBLIC_URL}/Me.jpg`}
-          alt="Me"
-          style={{
-            maxWidth: '100%',
-            height: 'auto',
-            top: '50%',
-            left: '50%',
-            // transform: 'translate(-50%, -50%)',
-          }}
-        />
-      <h2 style={{
-        position: 'absolute',
-        top: '25vw',
-        left: '50%',
-      }}>
-        Zachary Tenn Yuk
-      </h2>
-      </div>
+        src={`${process.env.PUBLIC_URL}/me.jpg`}
+        alt="Me"
+        style={{ 
+          maxHeight: '100vh', 
+          width: '100vw', 
+          objectFit: 'cover',
+          position: 'absolute',
+          top: '0',
+          left: '0',
+        }} 
+      />
+      <HomeCard>
+        <h1 className="typing-animation">Helloooo World! I'm Zach</h1>
+      </HomeCard>
     </div>
   );
 }

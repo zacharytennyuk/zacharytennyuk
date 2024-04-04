@@ -10,7 +10,7 @@ import Contact from './pages/Contact';
 
 export default function App() {
   return (
-    <div>
+    <div className="bg-emerald">
       <NavBar />
       <main >
       <div id="home" className="section">

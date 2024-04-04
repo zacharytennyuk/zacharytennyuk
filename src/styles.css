@@ -5,15 +5,18 @@ html {
 .section {
     padding-top: 4rem;
     margin-top: -4rem;
-  }
+}
 
 .navBar {
     @apply w-full bg-amber text-gold flex justify-end px-4 py-2 gap-10 fixed top-0 z-10 shadow-md;
 }
 
 .page {
-    @apply w-full bg-emerald flex flex-col justify-center items-center py-3 h-full;
-    box-sizing: border-box;
+    @apply w-full bg-emerald flex flex-col justify-center items-center py-3 h-screen;
+    position: relative;
+    width: 100%; /* Ensure it spans the full width */
+    height: 100vh; /* Adjust the height as needed */
+    overflow: hidden; /* Hide overflow to prevent scrollbars */
 }
 
 .body {
@@ -24,14 +27,18 @@ html {
     @apply text-sm p-10 text-gold text-center;
 }
 
+.contactTitle {
+    @apply text-sm text-gold rounded-full px-4 py-2 bg-emerald;
+
+}
+
 .contacts {
     @apply text-emerald w-full flex items-center gap-20 align-middle text-center justify-center;
 }
 
 .button {
-    @apply text-sm text-gold border border-8 rounded-full px-4 py-2 bg-emerald;
+    @apply text-sm text-gold border-8 border-amber rounded-full px-4 py-2 bg-emerald;
     transition: background-color 0.3s ease, border-color 0.3s ease;
-    border-color: #EBAA25;
     border-width: 4px;
     border-style: solid;
 
@@ -42,3 +49,31 @@ html {
     border-color: #654400;
     color: #654400;
 }
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  @keyframes blink-caret {
+    50% { border-color: transparent; }
+  }
+  
+  .typing-animation {
+    border-right: 2px solid;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block; /* Necessary for the animation to work correctly */
+    animation: typing 3.5s steps(40, end) forwards, 
+               blink-caret 0.75s step-end infinite;
+  }
+  
+  /* Stop the caret blinking at the end of the typing animation */
+  .typing-animation::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    border-right: 2px solid transparent; /* Makes the caret 'disappear' after typing */
+    /* The adjustment here is more about hiding the caret since stopping an animation requires JS */
+  }
+  

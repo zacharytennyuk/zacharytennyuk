@@ -7,8 +7,8 @@ const Project = ({ title, description, githubLink }) => {
       style={{
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'space-between', // Align items vertically
-        alignItems: 'flex-start', // Align items horizontally
+        justifyContent: 'space-between',
+        alignItems: 'flex-start',
         borderRadius: '10px',
         padding: '1.5rem',
         maxWidth: '300px',
@@ -23,15 +23,24 @@ const Project = ({ title, description, githubLink }) => {
       }}
     >
       <h2 style={{ fontWeight: 'bold', fontSize: '1.5rem', marginBottom: 'auto' }}>{title}</h2>
-      <p style={{ fontSize: '1rem', marginTop: '0', marginBottom: 'auto' }}>{description}</p>
+      <br/>
+      <p style={{ fontSize: '1rem', marginTop: '0', marginBottom: 'auto', textAlign: 'left'}}>{description}</p>
+      <br/>
       {githubLink && (
-        <a 
+        <a className="button"
           href={githubLink} 
           target="_blank" 
           rel="noopener noreferrer"
-          style={{ color: '#023025', textDecoration: 'none', display: 'flex', alignItems: 'center' }}
+          style={{ 
+            textDecoration: 'none', 
+            display: 'flex', 
+            justifyContent: 'center', // Center the link horizontally within its container
+            width: '100%', // Make the link's container full width to enable centering
+            alignItems: 'center',
+            marginTop: '1rem', // Add some top margin to separate from the description
+          }}
         >
-          <FaGithub size={20} style={{ marginRight: '0.5rem' }} />
+          <FaGithub size={20} style={{ marginRight: '0.5rem'}} />
           View Repository
         </a>
       )}

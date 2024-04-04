@@ -1,23 +1,3 @@
-// import React from 'react';
-
-// const Title = ({ children }) => {
-//     return (
-//     <div
-//       style={{
-//         backgroundImage: `url(${process.env.PUBLIC_URL}/gold.jpg)`, // Corrected path
-//         backgroundSize: 'cover',
-//         backgroundPosition: 'center',
-//         borderRadius: 20,
-//         width: 72,
-//         padding: 2
-//       }}>
-//       {children}
-//     </div>
-//   );
-// };
-
-// export default Title;
-
 import React from 'react';
 
 const Title = ({ children }) => {
@@ -38,8 +18,10 @@ const Title = ({ children }) => {
         backgroundImage: `url(${process.env.PUBLIC_URL}/gold.jpg)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        color: 'black',
+        color: '#023025',
+        fontWeight: 'bold',
         boxShadow: '10px 10px 15px rgba(0, 0, 0, 0.6)',
+        zIndex: '1',
       }}>
         {children}
       </div>

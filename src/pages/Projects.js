@@ -8,6 +8,7 @@ export default function Projects() {
       <div className="page">
         <h1>
           <Title>Projects</Title>
+          <br />
           <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', margin: '20px' }}>
           <Project 
             title="EduToon" 
