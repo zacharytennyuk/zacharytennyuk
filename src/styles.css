@@ -7,14 +7,38 @@ html {
     margin-top: -4rem;
   }
 
-  .navBar {
-    @apply w-full bg-amber flex justify-end px-4 py-2 gap-10 fixed top-0 z-10 shadow-md;
-}
-
-.navLink {
-    @apply text-gold hover:text-yellow-200;
+.navBar {
+    @apply w-full bg-amber text-gold flex justify-end px-4 py-2 gap-10 fixed top-0 z-10 shadow-md;
 }
 
 .page {
-    @apply min-h-screen w-full bg-emerald text-gold;
+    @apply w-full bg-emerald flex flex-col justify-center items-center py-3 h-full;
+    box-sizing: border-box;
+}
+
+.body {
+    @apply text-sm p-10 text-gold;
+}
+
+.experience {
+    @apply text-sm p-10 text-gold text-center;
+}
+
+.contacts {
+    @apply text-emerald w-full flex items-center gap-20 align-middle text-center justify-center;
+}
+
+.button {
+    @apply text-sm text-gold border border-8 rounded-full px-4 py-2 bg-emerald;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    border-color: #EBAA25;
+    border-width: 4px;
+    border-style: solid;
+
+}
+
+.button:hover {
+    background-color: aquamarine;
+    border-color: #654400;
+    color: #654400;
 }

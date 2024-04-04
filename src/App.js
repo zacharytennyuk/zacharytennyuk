@@ -4,7 +4,7 @@ import './styles.css';
 import NavBar from './components/NavBar';
 import Home from './pages/Home';
 import About from './pages/About';
-import Resume from './pages/Resume';
+import Experience from './pages/Experience';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 
@@ -19,8 +19,8 @@ export default function App() {
         <div id="about" className="section">
           <About />
           </div>
-        <div id="resume" className="section">
-          <Resume />
+        <div id="experience" className="section">
+          <Experience />
           </div>
         <div id="projects" className="section">
           <Projects />
